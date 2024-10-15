@@ -75,11 +75,7 @@ This project includes several complex SQL queries and stored procedures for vari
 A trigger is implemented to log changes in a book's status (from 'Available' to 'Borrowed' or vice versa) into an `AuditLog` table, capturing the `BookID`, `StatusChange`, and `ChangeDate`.
 
 ## Installation and Setup
-
-### Prerequisites:
-- **Microsoft SQL Server**: Ensure you have SQL Server installed locally or on a cloud platform.
-- **SQL Server Management Studio (SSMS)**: To run and manage SQL scripts.
-
+ 
 ### Steps:
 1. Clone the repository to your local machine:
    ```bash

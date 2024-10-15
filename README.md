@@ -53,7 +53,8 @@ You can view the detailed ER model diagram in the repository's [ERD folder](./ER
 ### Sample SQL Scripts
 The SQL scripts to create the schema and seed the database can be found in the [`sql` folder](./sql). These include:
 - `create_tables.sql`: Script to create the Books, Borrowers, and Loans tables.
-- `seed_data.sql`: DML script to populate the database with sample data (1000 books, 1000 borrowers, and 1000 loan records).
+- `seed_data.sql`: DML script to populate the database with sample data (1000 books, 1000 borrowers, and 1000 loan records) I used [www.mockaroo.com](https://www.mockaroo.com/schemas/new) to generate sample data . 
+  
 
 ## Complex Queries and Procedures
 

@@ -53,7 +53,8 @@ You can view the detailed ER model diagram in the repository's [ERD folder](./ER
 ### Sample SQL Scripts
 The SQL scripts to create the schema and seed the database can be found in the [`sql` folder](./sql). These include:
 - `create_tables.sql`: Script to create the Books, Borrowers, and Loans tables.
-- `seed_data.sql`: DML script to populate the database with sample data (1000 books, 1000 borrowers, and 1000 loan records).
+- `seed_data.sql`: DML script to populate the database with sample data (1000 books, 1000 borrowers, and 1000 loan records) I used [www.mockaroo.com](https://www.mockaroo.com/schemas/new) to generate sample data . 
+  
 
 ## Complex Queries and Procedures
 
@@ -75,11 +76,7 @@ This project includes several complex SQL queries and stored procedures for vari
 A trigger is implemented to log changes in a book's status (from 'Available' to 'Borrowed' or vice versa) into an `AuditLog` table, capturing the `BookID`, `StatusChange`, and `ChangeDate`.
 
 ## Installation and Setup
-
-### Prerequisites:
-- **Microsoft SQL Server**: Ensure you have SQL Server installed locally or on a cloud platform.
-- **SQL Server Management Studio (SSMS)**: To run and manage SQL scripts.
-
+ 
 ### Steps:
 1. Clone the repository to your local machine:
    ```bash

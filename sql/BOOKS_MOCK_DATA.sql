@@ -8,6 +8,15 @@ create table BOOKS_MOCK_DATA (
 	shelflocation VARCHAR(50),
 	currentstatus VARCHAR(50)
 );
+-- This will help with queries that analyze borrowing trends by genre
+CREATE INDEX idx_books_genre ON Books(Genre);
+-- Useful for queries that filter books based on whether they are available or borrowed
+CREATE INDEX idx_books_status ON Books(CurrentStatus);
+-- Helps with queries that rank authors by borrowing frequency
+CREATE INDEX idx_books_author ON Books(Author);
+
+
+
 insert into BOOKS_MOCK_DATA (bookid, title, author, isbn, publisheddate, genre, shelflocation, currentstatus) values (56, 'book1', 'wafa', '1a2c3b', '1/3/2024', 'drama', 'london', 'Available');
 insert into BOOKS_MOCK_DATA (bookid, title, author, isbn, publisheddate, genre, shelflocation, currentstatus) values (98, 'book1', 'wafa', '1a2c3b', '8/17/2024', 'drama', 'london', 'Available');
 insert into BOOKS_MOCK_DATA (bookid, title, author, isbn, publisheddate, genre, shelflocation, currentstatus) values (40, 'book1', 'wafa', '1a2c3b', '2/20/2024', 'drama', 'london', 'Available');

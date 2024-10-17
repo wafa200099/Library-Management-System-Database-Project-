@@ -6,6 +6,11 @@ create table BORROERS_MOCK_DATA (
 	dateofbirth DATE,
 	membershipdate DATE
 );
+-- Helps with queries analyzing borrowing preferences by age group.
+CREATE INDEX idx_borrowers_dob ON Borrowers(DateOfBirth);
+-- Important for the stored procedure sp_AddNewBorrower that checks for existing borrowers by email.
+CREATE INDEX idx_borrowers_email ON Borrowers(Email);
+
 insert into BORROERS_MOCK_DATA (borrowerid, firstname, lastname, email, dateofbirth, membershipdate) values (7, 'Joy', 'Dan', 'Joy.Danigmail.com', '9/27/2024', '4/25/2024');
 insert into BORROERS_MOCK_DATA (borrowerid, firstname, lastname, email, dateofbirth, membershipdate) values (62, 'Joy', 'Dan', 'Joy.Danlgmail.com', '9/24/2024', '4/15/2024');
 insert into BORROERS_MOCK_DATA (borrowerid, firstname, lastname, email, dateofbirth, membershipdate) values (26, 'Joy', 'Dan', 'Joy.Danjgmail.com', '9/10/2024', '8/4/2024');

@@ -6,6 +6,17 @@ create table LOANS_MOCK_DATA (
 	duedate DATE,
 	datereturned DATE
 );
+
+-- Helps with overdue book analysis and date range queries
+CREATE INDEX idx_loans_dates ON Loans(DateBorrowed, DateReturned);
+
+-- Useful for queries retrieving loans made by a particular borrower.
+CREATE INDEX idx_loans_borrowerid ON Loans(BorrowerID);
+
+-- This will speed up queries joining Loans and Books, such as retrieving all loans for a particular book.
+CREATE INDEX idx_loans_bookid ON Loans(BookID);
+
+
 insert into LOANS_MOCK_DATA (loanid, bookid, borrowerid, dateborrowed, duedate, datereturned) values (28, 59, 23, '10/13/2023', '3/24/2024', '5/15/2024');
 insert into LOANS_MOCK_DATA (loanid, bookid, borrowerid, dateborrowed, duedate, datereturned) values (76, 50, 92, '5/15/2024', '5/7/2024', '3/30/2024');
 insert into LOANS_MOCK_DATA (loanid, bookid, borrowerid, dateborrowed, duedate, datereturned) values (64, 85, 34, '3/11/2024', '9/3/2024', '4/25/2024');
